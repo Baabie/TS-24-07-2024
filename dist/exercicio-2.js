@@ -9,9 +9,10 @@ function calcularMediaPonderada(lista) {
     if (lista.length === 0)
         return 0;
     let somaNotas = 0;
-    const somaPesos = 0;
+    let somaPesos = 0;
     for (const item of lista) {
         somaNotas += item.nota * item.peso;
+        somaPesos += item.peso;
     }
     return somaNotas / somaPesos;
 }
@@ -23,4 +24,7 @@ const lista2 = [
     { nota: 7, peso: 1 },
     { nota: 5, peso: 2 }
 ];
-console.log(calcularMediaPonderada(lista1));
+const media1 = calcularMediaPonderada(lista1);
+console.log(`A média ponderada da lista1 é: ${media1}`);
+const media2 = calcularMediaPonderada(lista2);
+console.log(`A media ponderada da lista2 é ${media2}`);

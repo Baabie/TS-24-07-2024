@@ -9,5 +9,3 @@ function calcularMedia(a, b) {
     const aprovado = media >= 6;
     return { media, aprovado };
 }
-const resultado = calcularMedia(7, 5);
-console.log(resultado);
